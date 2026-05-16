@@ -1,0 +1,164 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        // Premium developer-focused color system
+        slate: {
+          950: '#0a0e14',
+          925: '#0f1419',
+          900: '#13171d',
+          850: '#1a1f26',
+          800: '#1f2429',
+          750: '#252a31',
+          700: '#2d333b',
+          650: '#373e47',
+          600: '#444c56',
+          500: '#545d68',
+        },
+        accent: {
+          blue: {
+            50: '#e6f1ff',
+            100: '#cce3ff',
+            200: '#99c7ff',
+            300: '#66abff',
+            400: '#3d8fff',
+            500: '#2563eb',
+            600: '#1d4ed8',
+            700: '#1e40af',
+            800: '#1e3a8a',
+            900: '#1e3a8a',
+          },
+          cyan: {
+            50: '#e0f7fa',
+            100: '#b2ebf2',
+            200: '#80deea',
+            300: '#4dd0e1',
+            400: '#26c6da',
+            500: '#00acc1',
+            600: '#0097a7',
+            700: '#00838f',
+            800: '#006064',
+            900: '#004d56',
+          },
+          indigo: {
+            50: '#e8eaf6',
+            100: '#c5cae9',
+            200: '#9fa8da',
+            300: '#7986cb',
+            400: '#5c6bc0',
+            500: '#3f51b5',
+            600: '#3949ab',
+            700: '#303f9f',
+            800: '#283593',
+            900: '#1a237e',
+          },
+        },
+        success: {
+          50: '#e8f5e9',
+          500: '#10b981',
+          600: '#059669',
+          700: '#047857',
+        },
+        warning: {
+          50: '#fff8e1',
+          500: '#f59e0b',
+          600: '#d97706',
+          700: '#b45309',
+        },
+        error: {
+          50: '#ffebee',
+          500: '#ef4444',
+          600: '#dc2626',
+          700: '#b91c1c',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        mono: ['JetBrains Mono', 'Fira Code', 'Consolas', 'monospace'],
+      },
+      fontSize: {
+        'xs': ['0.75rem', { lineHeight: '1rem', letterSpacing: '0.01em' }],
+        'sm': ['0.875rem', { lineHeight: '1.25rem', letterSpacing: '0.01em' }],
+        'base': ['1rem', { lineHeight: '1.5rem', letterSpacing: '0' }],
+        'lg': ['1.125rem', { lineHeight: '1.75rem', letterSpacing: '-0.01em' }],
+        'xl': ['1.25rem', { lineHeight: '1.75rem', letterSpacing: '-0.01em' }],
+        '2xl': ['1.5rem', { lineHeight: '2rem', letterSpacing: '-0.02em' }],
+        '3xl': ['1.875rem', { lineHeight: '2.25rem', letterSpacing: '-0.02em' }],
+        '4xl': ['2.25rem', { lineHeight: '2.5rem', letterSpacing: '-0.02em' }],
+      },
+      screens: {
+        'xs': '475px',
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
+      },
+      spacing: {
+        '18': '4.5rem',
+        '88': '22rem',
+        '112': '28rem',
+        '128': '32rem',
+      },
+      maxWidth: {
+        '8xl': '88rem',
+        '9xl': '96rem',
+      },
+      borderRadius: {
+        'sm': '0.25rem',
+        'md': '0.375rem',
+        'lg': '0.5rem',
+        'xl': '0.625rem',
+      },
+      boxShadow: {
+        'sm': '0 1px 2px 0 rgba(0, 0, 0, 0.2)',
+        'md': '0 2px 4px -1px rgba(0, 0, 0, 0.3), 0 1px 2px -1px rgba(0, 0, 0, 0.2)',
+        'lg': '0 4px 8px -2px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.2)',
+        'xl': '0 8px 16px -4px rgba(0, 0, 0, 0.4), 0 4px 8px -4px rgba(0, 0, 0, 0.2)',
+        'inner': 'inset 0 1px 2px 0 rgba(0, 0, 0, 0.3)',
+        'glow-sm': '0 0 8px rgba(37, 99, 235, 0.15)',
+        'glow-md': '0 0 12px rgba(37, 99, 235, 0.2)',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.3s ease-out',
+        'slide-up': 'slideUp 0.3s ease-out',
+        'slide-down': 'slideDown 0.3s ease-out',
+        'scale-in': 'scaleIn 0.2s ease-out',
+        'pulse-subtle': 'pulseSubtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(10px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        slideDown: {
+          '0%': { transform: 'translateY(-10px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        scaleIn: {
+          '0%': { transform: 'scale(0.95)', opacity: '0' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
+        pulseSubtle: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.8' },
+        },
+      },
+      backdropBlur: {
+        xs: '2px',
+      },
+    },
+  },
+  plugins: [],
+}
+
+// Made with Bob
