@@ -11,7 +11,7 @@ const Button = ({
   onClick,
   type = 'button'
 }) => {
-  const baseClasses = 'font-medium rounded-md transition-smooth flex items-center justify-center gap-2 focus-ring';
+  const baseClasses = 'font-medium rounded-md transition-smooth flex items-center justify-center gap-1.5 sm:gap-2 focus-ring';
   
   const variants = {
     primary: 'bg-accent-blue-600 hover:bg-accent-blue-700 text-white border border-accent-blue-500/50 shadow-sm hover:shadow-md',
@@ -23,10 +23,10 @@ const Button = ({
   };
   
   const sizes = {
-    xs: 'px-2.5 py-1 text-xs',
-    sm: 'px-3 py-1.5 text-sm',
-    md: 'px-4 py-2 text-sm',
-    lg: 'px-5 py-2.5 text-base'
+    xs: 'px-2 sm:px-2.5 py-1 text-[11px] sm:text-xs min-h-[36px] sm:min-h-0',
+    sm: 'px-2.5 sm:px-3 py-1.5 text-xs sm:text-sm min-h-[40px] sm:min-h-0',
+    md: 'px-3 sm:px-4 py-2 text-sm min-h-[44px] sm:min-h-0',
+    lg: 'px-4 sm:px-5 py-2.5 text-sm sm:text-base min-h-[48px] sm:min-h-0'
   };
   
   const disabledClasses = disabled || loading ? 'opacity-50 cursor-not-allowed' : '';

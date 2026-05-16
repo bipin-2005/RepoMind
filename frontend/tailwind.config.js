@@ -90,6 +90,15 @@ export default {
         '2xl': ['1.5rem', { lineHeight: '2rem', letterSpacing: '-0.02em' }],
         '3xl': ['1.875rem', { lineHeight: '2.25rem', letterSpacing: '-0.02em' }],
         '4xl': ['2.25rem', { lineHeight: '2.5rem', letterSpacing: '-0.02em' }],
+        // Fluid responsive typography
+        'fluid-xs': ['clamp(0.7rem, 0.65rem + 0.25vw, 0.75rem)', { lineHeight: '1.4', letterSpacing: '0.01em' }],
+        'fluid-sm': ['clamp(0.8rem, 0.75rem + 0.25vw, 0.875rem)', { lineHeight: '1.4', letterSpacing: '0.01em' }],
+        'fluid-base': ['clamp(0.9rem, 0.85rem + 0.25vw, 1rem)', { lineHeight: '1.5', letterSpacing: '0' }],
+        'fluid-lg': ['clamp(1rem, 0.95rem + 0.3vw, 1.125rem)', { lineHeight: '1.5', letterSpacing: '-0.01em' }],
+        'fluid-xl': ['clamp(1.1rem, 1rem + 0.4vw, 1.25rem)', { lineHeight: '1.4', letterSpacing: '-0.01em' }],
+        'fluid-2xl': ['clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem)', { lineHeight: '1.3', letterSpacing: '-0.02em' }],
+        'fluid-3xl': ['clamp(1.5rem, 1.35rem + 0.75vw, 1.875rem)', { lineHeight: '1.2', letterSpacing: '-0.02em' }],
+        'fluid-4xl': ['clamp(1.75rem, 1.5rem + 1vw, 2.25rem)', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
       },
       screens: {
         'xs': '475px',
@@ -104,10 +113,25 @@ export default {
         '88': '22rem',
         '112': '28rem',
         '128': '32rem',
+        // Fluid responsive spacing
+        'fluid-1': 'clamp(0.25rem, 0.2rem + 0.25vw, 0.5rem)',
+        'fluid-2': 'clamp(0.5rem, 0.4rem + 0.5vw, 1rem)',
+        'fluid-3': 'clamp(0.75rem, 0.6rem + 0.75vw, 1.5rem)',
+        'fluid-4': 'clamp(1rem, 0.8rem + 1vw, 2rem)',
+        'fluid-5': 'clamp(1.25rem, 1rem + 1.25vw, 2.5rem)',
+        'fluid-6': 'clamp(1.5rem, 1.2rem + 1.5vw, 3rem)',
       },
       maxWidth: {
         '8xl': '88rem',
         '9xl': '96rem',
+        // Responsive container max-widths
+        'container-sm': '640px',
+        'container-md': '768px',
+        'container-lg': '1024px',
+        'container-xl': '1280px',
+        'container-2xl': '1400px',
+        'container-3xl': '1600px',
+        'container-4xl': '1800px',
       },
       borderRadius: {
         'sm': '0.25rem',

@@ -19,9 +19,9 @@ const Card = ({
   
   const paddings = {
     none: '',
-    sm: 'p-3',
-    default: 'p-5',
-    lg: 'p-6',
+    sm: 'p-2 sm:p-3',
+    default: 'p-3 sm:p-4 md:p-5',
+    lg: 'p-4 sm:p-5 md:p-6 lg:p-7',
   };
   
   const hoverClasses = hover ? 'card-elevated-hover cursor-pointer' : '';

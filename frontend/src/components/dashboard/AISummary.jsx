@@ -62,37 +62,37 @@ const AISummary = ({ aiSummary }) => {
   };
 
   return (
-    <div className="space-y-4 sm:space-y-5 md:space-y-6">
+    <div className="space-y-3 sm:space-y-4 md:space-y-5 lg:space-y-6">
       {/* Overview Section */}
-      <Card className="p-4 sm:p-5 md:p-6">
-        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-4">
-          <Brain className="w-6 h-6 text-purple-500" />
-          <h2 className="text-xl font-bold">AI-Generated Summary</h2>
+      <Card className="p-3 sm:p-4 md:p-5 lg:p-6">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+          <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-purple-500 flex-shrink-0" />
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold">AI-Generated Summary</h2>
           <Badge variant="info" className="ml-auto">
             Powered by AI
           </Badge>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {/* Project Purpose */}
           {overview.summary && (
             <div>
-              <h3 className="text-sm font-semibold text-gray-700 mb-2">Project Purpose</h3>
-              <p className="text-gray-600 leading-relaxed">{overview.summary}</p>
+              <h3 className="text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2">Project Purpose</h3>
+              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{overview.summary}</p>
             </div>
           )}
 
           {/* Architecture */}
           {overview.architecture && (
             <div>
-              <h3 className="text-sm font-semibold text-gray-700 mb-2">Architecture Overview</h3>
-              <p className="text-gray-600 leading-relaxed">{overview.architecture}</p>
+              <h3 className="text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2">Architecture Overview</h3>
+              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{overview.architecture}</p>
             </div>
           )}
 
           {/* Metrics */}
           {(overview.activityLevel || overview.complexityScore || metrics.contributors || metrics.commits) && (
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-4 border-t">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 md:gap-4 pt-3 sm:pt-4 border-t">
               {overview.activityLevel && (
                 <div>
                   <p className="text-xs text-gray-500 mb-1">Activity Level</p>
@@ -125,13 +125,13 @@ const AISummary = ({ aiSummary }) => {
       </Card>
 
       {/* Technologies Section */}
-      <Card className="p-4 sm:p-5 md:p-6">
-        <div className="flex items-center gap-3 mb-4">
-          <Code className="w-5 h-5 text-blue-500" />
-          <h3 className="text-lg font-bold">Technology Stack</h3>
+      <Card className="p-3 sm:p-4 md:p-5 lg:p-6">
+        <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+          <Code className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500 flex-shrink-0" />
+          <h3 className="text-base sm:text-lg md:text-xl font-bold">Technology Stack</h3>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
           {/* Frontend */}
           <div>
             <h4 className="text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">

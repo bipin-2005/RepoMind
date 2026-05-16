@@ -94,10 +94,10 @@ const ReadmeGenerator = () => {
   }
 
   return (
-    <div className="space-y-4 sm:space-y-5 md:space-y-6 animate-fade-in">
+    <div className="space-y-3 sm:space-y-4 md:space-y-5 lg:space-y-6 animate-fade-in">
       {/* Page Header */}
       <div>
-        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold gradient-text mb-2">README Generator</h1>
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold gradient-text mb-2">README Generator</h1>
         <p className="text-xs sm:text-sm text-slate-400">
           Generate comprehensive, professional README files powered by AI
         </p>

@@ -67,17 +67,17 @@ const RepositoryAnalyzer = () => {
   };
   
   return (
-    <div className="space-y-5 animate-fade-in">
+    <div className="space-y-4 sm:space-y-5 md:space-y-6 animate-fade-in">
       {/* Page Header */}
       <div>
-        <h1 className="text-2xl font-semibold text-slate-100 mb-1">Repository Analyzer</h1>
-        <p className="text-sm text-slate-500">
+        <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-slate-100 mb-1">Repository Analyzer</h1>
+        <p className="text-xs sm:text-sm md:text-base text-slate-500">
           Analyze GitHub repositories or upload projects for AI-powered insights
         </p>
       </div>
       
       {/* Input Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4 md:gap-5">
         {/* GitHub URL Input */}
         <Card>
           <div className="flex items-center gap-2.5 mb-4">

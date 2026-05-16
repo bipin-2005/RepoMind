@@ -146,12 +146,12 @@ const Dashboard = () => {
   }
   
   return (
-    <div className="space-y-3 sm:space-y-4 md:space-y-5 animate-fade-in">
+    <div className="space-y-3 sm:space-y-4 md:space-y-5 lg:space-y-6 animate-fade-in">
       {/* Page Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
         <div className="flex-1 min-w-0">
-          <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-slate-100 mb-1 tracking-tight">Dashboard</h1>
-          <p className="text-xs sm:text-sm text-slate-400">
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-slate-100 mb-1 tracking-tight">Dashboard</h1>
+          <p className="text-xs sm:text-sm md:text-base text-slate-400">
             Repository intelligence and AI-powered insights
           </p>
         </div>
@@ -161,7 +161,7 @@ const Dashboard = () => {
       </div>
       
       {/* Repository Overview Cards */}
-      <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3">
+      <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4">
         <StatCard
           title="Repository"
           value={repository.name}
@@ -190,22 +190,22 @@ const Dashboard = () => {
       
       {/* Repository Details Card */}
       <Card className="overflow-hidden">
-        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-3">
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-4 mb-3 sm:mb-4">
           <div className="flex-1 min-w-0">
             <div className="flex flex-wrap items-center gap-2 mb-2">
-              <h2 className="text-base sm:text-lg font-semibold text-slate-100 tracking-tight break-words">
+              <h2 className="text-base sm:text-lg md:text-xl font-semibold text-slate-100 tracking-tight break-words">
                 {repository.name}
               </h2>
               <Badge variant="primary" size="xs" dot>Active</Badge>
             </div>
-            <p className="text-xs sm:text-sm text-slate-300 mb-1.5 leading-relaxed">{repository.description}</p>
-            <p className="text-xs text-slate-500">
+            <p className="text-xs sm:text-sm md:text-base text-slate-300 mb-1.5 leading-relaxed">{repository.description}</p>
+            <p className="text-xs sm:text-sm text-slate-500">
               Analyzed {new Date(repository.analyzedAt).toLocaleDateString()}
             </p>
           </div>
         </div>
         
-        <div className="flex flex-wrap gap-1.5 mb-4">
+        <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4">
           {repository.techStack && repository.techStack.length > 0 ? (
             repository.techStack.map((tech, index) => (
               <Badge key={index} variant="secondary" size="sm">
@@ -217,28 +217,28 @@ const Dashboard = () => {
           )}
         </div>
         
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-4 separator">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-6 pt-4 separator">
           <div>
-            <p className="text-xs text-slate-400 mb-1 font-medium uppercase tracking-wider">Total Files</p>
-            <p className="text-base font-semibold text-slate-200 tabular-nums">
+            <p className="text-[10px] sm:text-xs text-slate-400 mb-1 font-medium uppercase tracking-wider">Total Files</p>
+            <p className="text-sm sm:text-base md:text-lg font-semibold text-slate-200 tabular-nums">
               {repository.structure?.totalFiles?.toLocaleString() || 0}
             </p>
           </div>
           <div>
-            <p className="text-xs text-slate-400 mb-1 font-medium uppercase tracking-wider">Watchers</p>
-            <p className="text-base font-semibold text-slate-200 tabular-nums">
+            <p className="text-[10px] sm:text-xs text-slate-400 mb-1 font-medium uppercase tracking-wider">Watchers</p>
+            <p className="text-sm sm:text-base md:text-lg font-semibold text-slate-200 tabular-nums">
               {repository.githubData?.watchers?.toLocaleString() || 0}
             </p>
           </div>
           <div>
-            <p className="text-xs text-slate-400 mb-1 font-medium uppercase tracking-wider">Contributors</p>
-            <p className="text-base font-semibold text-slate-200 tabular-nums">
+            <p className="text-[10px] sm:text-xs text-slate-400 mb-1 font-medium uppercase tracking-wider">Contributors</p>
+            <p className="text-sm sm:text-base md:text-lg font-semibold text-slate-200 tabular-nums">
               {repository.githubData?.contributors?.length || 0}
             </p>
           </div>
           <div>
-            <p className="text-xs text-slate-400 mb-1 font-medium uppercase tracking-wider">Languages</p>
-            <p className="text-base font-semibold text-slate-200 tabular-nums">
+            <p className="text-[10px] sm:text-xs text-slate-400 mb-1 font-medium uppercase tracking-wider">Languages</p>
+            <p className="text-sm sm:text-base md:text-lg font-semibold text-slate-200 tabular-nums">
               {repository.languages ? Object.keys(repository.languages).length : 0}
             </p>
           </div>
@@ -246,7 +246,7 @@ const Dashboard = () => {
       </Card>
       
       {/* Charts and Insights Row */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4 md:gap-5">
         {/* Tech Stack Chart */}
         {chartData?.languageDistribution && (
           <TechStackChart data={chartData.languageDistribution} />
@@ -266,8 +266,8 @@ const Dashboard = () => {
       {/* AI Insights Section */}
       {insights.length > 0 && (
         <div>
-          <h2 className="text-base sm:text-lg font-semibold text-slate-100 mb-3">AI Insights</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-3">
+          <h2 className="text-base sm:text-lg md:text-xl font-semibold text-slate-100 mb-3">AI Insights</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 sm:gap-3 md:gap-4">
             {insights.map((insight, index) => (
               <InsightCard key={insight.id || index} insight={insight} />
             ))}
@@ -278,14 +278,14 @@ const Dashboard = () => {
       {/* Contributors Section */}
       {repository.githubData?.contributors && repository.githubData.contributors.length > 0 && (
         <Card>
-          <h3 className="text-sm sm:text-base font-semibold text-slate-100 mb-3 sm:mb-4">Top Contributors</h3>
-          <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 sm:gap-4">
+          <h3 className="text-sm sm:text-base md:text-lg font-semibold text-slate-100 mb-3 sm:mb-4">Top Contributors</h3>
+          <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-3 sm:gap-4">
             {repository.githubData.contributors.slice(0, 5).map((contributor, index) => (
               <div key={index} className="text-center group">
                 <img
                   src={contributor.avatar}
                   alt={contributor.login}
-                  className="w-12 h-12 rounded mx-auto mb-2 border border-slate-800/50 group-hover:border-accent-blue-500/40 transition-smooth"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded mx-auto mb-2 border border-slate-800/50 group-hover:border-accent-blue-500/40 transition-smooth"
                 />
                 <p className="text-xs font-medium text-slate-200 truncate">{contributor.login}</p>
                 <p className="text-[10px] text-slate-500 tabular-nums">{contributor.contributions} commits</p>
@@ -297,47 +297,47 @@ const Dashboard = () => {
       
       {/* Quick Actions */}
       <Card>
-        <h3 className="text-sm sm:text-base font-semibold text-slate-100 mb-3">Quick Actions</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3">
+        <h3 className="text-sm sm:text-base md:text-lg font-semibold text-slate-100 mb-3">Quick Actions</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-3 md:gap-4">
           <button
             onClick={() => navigate('/readme-generator')}
-            className="p-3 rounded text-left transition-smooth group hover:bg-slate-850/60 border border-slate-800/40 hover:border-accent-blue-500/30"
+            className="p-3 sm:p-4 rounded text-left transition-smooth group hover:bg-slate-850/60 border border-slate-800/40 hover:border-accent-blue-500/30"
           >
-            <div className="flex items-center gap-2.5 mb-2">
-              <div className="bg-accent-blue-500/10 p-1.5 rounded border border-slate-800/40 group-hover:border-accent-blue-500/30 transition-smooth">
-                <Sparkles className="text-accent-blue-400" size={16} strokeWidth={2} />
+            <div className="flex items-center gap-2 sm:gap-2.5 mb-2">
+              <div className="bg-accent-blue-500/10 p-1.5 sm:p-2 rounded border border-slate-800/40 group-hover:border-accent-blue-500/30 transition-smooth flex-shrink-0">
+                <Sparkles className="text-accent-blue-400 sm:w-[16px] sm:h-[16px]" size={14} strokeWidth={2} />
               </div>
-              <h4 className="text-sm font-semibold text-slate-200">Generate README</h4>
+              <h4 className="text-xs sm:text-sm font-semibold text-slate-200">Generate README</h4>
             </div>
-            <p className="text-xs text-slate-400 leading-relaxed">
+            <p className="text-[11px] sm:text-xs text-slate-400 leading-relaxed">
               Create professional documentation with AI
             </p>
           </button>
           
-          <button className="p-3 rounded text-left transition-smooth group border border-slate-800/40 opacity-50 cursor-not-allowed">
-            <div className="flex items-center gap-2.5 mb-2">
-              <div className="bg-success-500/10 p-1.5 rounded border border-slate-800/40">
-                <Code2 className="text-success-400" size={16} strokeWidth={2} />
+          <button className="p-3 sm:p-4 rounded text-left transition-smooth group border border-slate-800/40 opacity-50 cursor-not-allowed">
+            <div className="flex items-center gap-2 sm:gap-2.5 mb-2">
+              <div className="bg-success-500/10 p-1.5 sm:p-2 rounded border border-slate-800/40 flex-shrink-0">
+                <Code2 className="text-success-400 sm:w-[16px] sm:h-[16px]" size={14} strokeWidth={2} />
               </div>
-              <h4 className="text-sm font-semibold text-slate-200">Generate Tests</h4>
-              <span className="ml-auto text-[10px] bg-slate-850 text-slate-500 px-1.5 py-0.5 rounded uppercase font-semibold tracking-wider">Soon</span>
+              <h4 className="text-xs sm:text-sm font-semibold text-slate-200 flex-1">Generate Tests</h4>
+              <span className="text-[9px] sm:text-[10px] bg-slate-850 text-slate-500 px-1.5 py-0.5 rounded uppercase font-semibold tracking-wider flex-shrink-0">Soon</span>
             </div>
-            <p className="text-xs text-slate-400 leading-relaxed">
+            <p className="text-[11px] sm:text-xs text-slate-400 leading-relaxed">
               Auto-generate unit tests for your code
             </p>
           </button>
           
           <button
             onClick={() => navigate('/analyzer')}
-            className="p-3 rounded text-left transition-smooth group hover:bg-slate-850/60 border border-slate-800/40 hover:border-accent-cyan-500/30"
+            className="p-3 sm:p-4 rounded text-left transition-smooth group hover:bg-slate-850/60 border border-slate-800/40 hover:border-accent-cyan-500/30"
           >
-            <div className="flex items-center gap-2.5 mb-2">
-              <div className="bg-accent-cyan-500/10 p-1.5 rounded border border-slate-800/40 group-hover:border-accent-cyan-500/30 transition-smooth">
-                <FolderGit2 className="text-accent-cyan-400" size={16} strokeWidth={2} />
+            <div className="flex items-center gap-2 sm:gap-2.5 mb-2">
+              <div className="bg-accent-cyan-500/10 p-1.5 sm:p-2 rounded border border-slate-800/40 group-hover:border-accent-cyan-500/30 transition-smooth flex-shrink-0">
+                <FolderGit2 className="text-accent-cyan-400 sm:w-[16px] sm:h-[16px]" size={14} strokeWidth={2} />
               </div>
-              <h4 className="text-sm font-semibold text-slate-200">Analyze Repository</h4>
+              <h4 className="text-xs sm:text-sm font-semibold text-slate-200">Analyze Repository</h4>
             </div>
-            <p className="text-xs text-slate-400 leading-relaxed">
+            <p className="text-[11px] sm:text-xs text-slate-400 leading-relaxed">
               Start analyzing a new repository
             </p>
           </button>

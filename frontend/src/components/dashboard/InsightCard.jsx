@@ -31,24 +31,24 @@ const InsightCard = ({ insight }) => {
   
   return (
     <Card hover className={`border ${colors.border}`}>
-      <div className="flex items-start gap-3">
-        <div className={`${colors.bg} p-2 rounded-md flex-shrink-0 border border-slate-800/50`}>
-          <Icon className={colors.text} size={16} strokeWidth={2} />
+      <div className="flex items-start gap-2 sm:gap-3">
+        <div className={`${colors.bg} p-1.5 sm:p-2 rounded-md flex-shrink-0 border border-slate-800/50`}>
+          <Icon className={`${colors.text} sm:w-[16px] sm:h-[16px]`} size={14} strokeWidth={2} />
         </div>
         
         <div className="flex-1 min-w-0">
-          <div className="flex items-start justify-between gap-2 mb-1.5">
-            <h4 className="text-sm font-semibold text-slate-100">{insight.title}</h4>
+          <div className="flex items-start justify-between gap-2 mb-1 sm:mb-1.5">
+            <h4 className="text-xs sm:text-sm font-semibold text-slate-100 leading-tight">{insight.title}</h4>
             {insight.severity && (
-              <Badge variant={severityVariants[insight.severity]} size="xs">
+              <Badge variant={severityVariants[insight.severity]} size="xs" className="flex-shrink-0">
                 {insight.severity}
               </Badge>
             )}
           </div>
           
-          <p className="text-xs text-slate-400 leading-relaxed mb-2">{insight.description}</p>
+          <p className="text-[11px] sm:text-xs text-slate-400 leading-relaxed mb-1.5 sm:mb-2">{insight.description}</p>
           
-          <div className="flex items-center gap-3 text-xs">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-[10px] sm:text-xs">
             {insight.count && (
               <span className={`${colors.text} font-medium`}>
                 {insight.count} {insight.count === 1 ? 'issue' : 'issues'}

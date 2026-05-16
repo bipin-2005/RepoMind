@@ -36,10 +36,11 @@ const Input = ({
           placeholder={placeholder}
           disabled={disabled}
           className={`
-            w-full input-terminal rounded-md px-3 py-2 text-sm
-            ${Icon ? 'pl-9' : ''}
+            w-full input-terminal rounded-md px-3 py-2 sm:py-2.5 text-xs sm:text-sm
+            ${Icon ? 'pl-8 sm:pl-9' : ''}
             ${error ? 'border-error-500 focus:border-error-500 focus:ring-error-500/20' : ''}
             ${disabled ? 'opacity-50 cursor-not-allowed' : ''}
+            min-h-[44px] sm:min-h-0
           `}
           {...props}
         />
