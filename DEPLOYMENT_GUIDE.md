@@ -134,6 +134,8 @@ VITE_API_URL=https://your-backend-url.onrender.com/api
 
 Replace `your-backend-url` with your actual Render backend URL.
 
+Note: A `vercel.json` file is included at the repository root to help Vercel detect the `frontend` subfolder and run the correct build.
+
 ### 3.3 Deploy
 
 1. Click **"Deploy"**
@@ -176,6 +178,8 @@ CORS_ORIGIN=https://your-app.vercel.app
 GITHUB_TOKEN=ghp_your_github_token
 OPENAI_API_KEY=sk-your_openai_key
 ```
+
+Tip: Use `backend/.env.example` as a template for required backend variables. Do NOT commit real secrets to the repository.
 
 ---
 
