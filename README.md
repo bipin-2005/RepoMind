@@ -153,30 +153,28 @@ repomind/
 
 ## 📸 Screenshots
 
+## 📸 Screenshots
+
 <table>
   <tr>
     <td align="center">
       <strong>📊 Dashboard</strong><br><br>
-      <img src="<img width="955" height="499" alt="image" src="https://github.com/user-attachments/assets/fe7a9213-010f-4966-92e5-fbc9547f8fda" />
-" alt="Dashboard" width="100%">
+      <img src="https://github.com/user-attachments/assets/fe7a9213-010f-4966-92e5-fbc9547f8fda" alt="Dashboard" width="100%">
     </td>
     <td align="center">
       <strong>🔍 Repository Analyzer</strong><br><br>
-      <img src="<img width="959" height="500" alt="image" src="https://github.com/user-attachments/assets/71c5bafe-4f5e-485d-9a62-5ab67e82ce62" />
-" alt="Repository Analyzer" width="100%">
+      <img src="https://github.com/user-attachments/assets/71c5bafe-4f5e-485d-9a62-5ab67e82ce62" alt="Repository Analyzer" width="100%">
     </td>
   </tr>
 
   <tr>
     <td align="center">
       <strong>📂 Repository Overview</strong><br><br>
-      <img src="<img width="956" height="496" alt="image" src="https://github.com/user-attachments/assets/ad32112a-c626-4cae-8a2b-71de12b74b61" />
-" alt="Repository Overview" width="100%">
+      <img src="https://github.com/user-attachments/assets/ad32112a-c626-4cae-8a2b-71de12b74b61" alt="Repository Overview" width="100%">
     </td>
     <td align="center">
       <strong>📈 AI Insights</strong><br><br>
-      <img src="<img width="710" height="422" alt="image" src="https://github.com/user-attachments/assets/69189840-69b9-4cc2-b2ef-df197bb8f575" />
-" alt="AI Insights" width="100%">
+      <img src="https://github.com/user-attachments/assets/69189840-69b9-4cc2-b2ef-df197bb8f575" alt="AI Insights" width="100%">
     </td>
   </tr>
 </table>
