@@ -286,7 +286,6 @@ For questions or feedback, please open an issue on GitHub.
 
 ---
 
-**Built with ❤️ for developers**
 
 ## 🎯 Roadmap
 
@@ -311,9 +310,14 @@ For questions or feedback, please open an issue on GitHub.
 ## 🐛 Known Issues
 
 - File upload currently uses mock data
-- GitHub API integration pending
 - AI features use mock responses
+- 
+## 👨‍💻 Contributors
+### Bipin Rajak
+- **GitHub:** https://github.com/bipin-2005
+- **LinkedIn:** https://www.linkedin.com/in/bipin-rajak/
 
-## 📚 Documentation
-
-For detailed documentation, visit the `/docs` folder (coming soon).
+### Anurag Kumar Harijan
+- **GitHub:** https://github.com/Anurag20-04
+- **LinkedIn:** https://www.linkedin.com/in/anurag-45era8349/
+---
