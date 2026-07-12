@@ -150,9 +150,6 @@ repomind/
 └── README.md
 ```
 
-
-## 📸 Screenshots
-
 ## 📸 Screenshots
 
 <table>
